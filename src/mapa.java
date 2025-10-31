@@ -10,10 +10,10 @@ public class mapa {
         Random rand = new Random();
         switch (rand.nextInt(5)) {
             case 0 :
-                territorio = "bosque";
+                territorio = "Bosque";
                 break;
             case 1 :
-                territorio = "campo abierto";
+                territorio = "Campo abierto";
                 break;
             case 2 :
                 territorio = "Montaña";
@@ -38,10 +38,10 @@ public class mapa {
         System.out.println("Equipo 1: " + equipoUno);
         equipoDos = reinos.get(rand.nextInt(reinos.size()));
         System.out.println("Equipo 2: " + equipoDos);
-        if((territorio=="bosque"&&equipoUno=="Inglaterra")||(territorio=="campo abierto"&&equipoUno=="Francia")||(territorio=="montaña"&&equipoUno=="Castilla-Aragon")||(territorio=="desierto"&&equipoUno=="Moros")||((territorio=="Bosque"||territorio=="playa"||territorio=="campo abierto"||territorio=="montaña"||territorio=="desierto")&&equipoUno=="Sacro Imperio Romano-Germanico")){
+        if((territorio=="Bosque"&&equipoUno=="Inglaterra")||(territorio=="Campo abierto"&&equipoUno=="Francia")||(territorio=="Montaña"&&equipoUno=="Castilla-Aragon")||(territorio=="Desierto"&&equipoUno=="Moros")||((territorio=="Bosque"||territorio=="playa"||territorio=="campo abierto")&&equipoUno=="Sacro Imperio Romano-Germanico")){
             System.out.println("el equipo 1 gana uno de ataque gracias al terreno");
         }
-        if((territorio=="bosque"&&equipoDos=="Inglaterra")||(territorio=="campo abierto"&&equipoDos=="Francia")||(territorio=="montaña"&&equipoDos=="Castilla-Aragon")||(territorio=="desierto"&&equipoDos=="Moros")||((territorio=="Bosque"||territorio=="playa"||territorio=="campo abierto"||territorio=="montaña"||territorio=="desierto")&&equipoDos=="Sacro Imperio Romano-Germanico")){
+        if((territorio=="Bosque"&&equipoDos=="Inglaterra")||(territorio=="Campo abierto"&&equipoDos=="Francia")||(territorio=="Montaña"&&equipoDos=="Castilla-Aragon")||(territorio=="Desierto"&&equipoDos=="Moros")||((territorio=="Bosque"||territorio=="playa"||territorio=="campo abierto")&&equipoDos=="Sacro Imperio Romano-Germanico")){
             System.out.println("el equipo 2 gana uno de ataque gracias al terreno");
         }
         for(int i = 0; i < 10; i++){
@@ -73,15 +73,15 @@ public class mapa {
                 mapa.get(fila).get(columna).setActivo(true);
                 mapa.get(fila).get(columna).setEquipo(1);
                 mapa.get(fila).get(columna).setPais(equipoUno);
-                if(territorio=="bosque"&&equipoUno=="Inglaterra"){
+                if(territorio=="Bosque"&&equipoUno=="Inglaterra"){
                     mapa.get(fila).get(columna).setAtaque(mapa.get(fila).get(columna).getAtaque()+1);
-                }else if(territorio=="campo abierto"&&equipoUno=="Francia"){
+                }else if(territorio=="Bampo abierto"&&equipoUno=="Francia"){
                     mapa.get(fila).get(columna).setDefensa(mapa.get(fila).get(columna).getDefensa()+1);
-                }else if(territorio=="montaña"&&equipoUno=="Castilla-Aragon"){
+                }else if(territorio=="Montaña"&&equipoUno=="Castilla-Aragon"){
                     mapa.get(fila).get(columna).setVidaactual(mapa.get(fila).get(columna).getVidaactual()+1);
-                }else if(territorio=="desierto"&&equipoUno=="Moros"){
+                }else if(territorio=="Desierto"&&equipoUno=="Moros"){
                     mapa.get(fila).get(columna).setAtaque(mapa.get(fila).get(columna).getAtaque()+1);
-                }else if((territorio=="Bosque"||territorio=="playa"||territorio=="campo abierto"||territorio=="montaña"||territorio=="desierto")&&equipoUno=="Sacro Imperio Romano-Germanico"){
+                }else if((territorio=="Bosque"||territorio=="Playa"||territorio=="Campo abierto")&&equipoUno=="Sacro Imperio Romano-Germanico"){
                     mapa.get(fila).get(columna).setDefensa(mapa.get(fila).get(columna).getDefensa()+1);
                 }
             }else{
@@ -96,13 +96,13 @@ public class mapa {
                 mapa.get(fila).get(columna).setPais(equipoDos);
                 if(territorio=="bosque"&&equipoDos=="Inglaterra"){
                     mapa.get(fila).get(columna).setDefensa(mapa.get(fila).get(columna).getDefensa()+1);
-                }else if(territorio=="campo abierto"&&equipoDos=="Francia"){
+                }else if(territorio=="Campo abierto"&&equipoDos=="Francia"){
                     mapa.get(fila).get(columna).setAtaque(mapa.get(fila).get(columna).getAtaque()+1);
-                }else if(territorio=="montaña"&&equipoDos=="Castilla-Aragon"){
+                }else if(territorio=="Montaña"&&equipoDos=="Castilla-Aragon"){
                     mapa.get(fila).get(columna).setVidaactual(mapa.get(fila).get(columna).getVidaactual()+1);
-                }else if(territorio=="desierto"&&equipoDos=="Moros"){
+                }else if(territorio=="Desierto"&&equipoDos=="Moros"){
                     mapa.get(fila).get(columna).setDefensa(mapa.get(fila).get(columna).getDefensa()+1);
-                }else if((territorio=="Bosque"||territorio=="playa"||territorio=="campo abierto"||territorio=="montaña"||territorio=="desierto")&&equipoDos=="Sacro Imperio Romano-Germanico"){
+                }else if((territorio=="Bosque"||territorio=="Playa"||territorio=="Campo abierto")&&equipoDos=="Sacro Imperio Romano-Germanico"){
                     mapa.get(fila).get(columna).setAtaque(mapa.get(fila).get(columna).getAtaque()+1);
                 }
             }else{
