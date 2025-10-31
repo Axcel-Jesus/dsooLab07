@@ -7,6 +7,7 @@ public class soldado {
     private int velocidad;
     private String actitud;
     private int equipo;
+    private String pais;
     public String id="";
     private boolean activo = false;//muestra si esta en el tablero o no, asi como si esta vivo o no
     public soldado() {
@@ -85,6 +86,12 @@ public class soldado {
     }
     public void setVida(int vida) {
         this.vida = vida;
+    }
+    public String getPais() {
+        return pais;
+    }
+    public void setPais(String pais) {
+        this.pais = pais;
     }
     public void atacar(){
         if(activo){
