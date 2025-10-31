@@ -75,7 +75,6 @@ public class mapa {
                 mapa.get(fila).get(columna).setPais(equipoUno);
                 if(territorio=="bosque"&&equipoUno=="Inglaterra"){
                     mapa.get(fila).get(columna).setAtaque(mapa.get(fila).get(columna).getAtaque()+1);
-
                 }else if(territorio=="campo abierto"&&equipoUno=="Francia"){
                     mapa.get(fila).get(columna).setDefensa(mapa.get(fila).get(columna).getDefensa()+1);
                 }else if(territorio=="montaña"&&equipoUno=="Castilla-Aragon"){
@@ -95,6 +94,17 @@ public class mapa {
                 mapa.get(fila).get(columna).setActivo(true);
                 mapa.get(fila).get(columna).setEquipo(2);
                 mapa.get(fila).get(columna).setPais(equipoDos);
+                if(territorio=="bosque"&&equipoDos=="Inglaterra"){
+                    mapa.get(fila).get(columna).setDefensa(mapa.get(fila).get(columna).getDefensa()+1);
+                }else if(territorio=="campo abierto"&&equipoDos=="Francia"){
+                    mapa.get(fila).get(columna).setAtaque(mapa.get(fila).get(columna).getAtaque()+1);
+                }else if(territorio=="montaña"&&equipoDos=="Castilla-Aragon"){
+                    mapa.get(fila).get(columna).setVidaactual(mapa.get(fila).get(columna).getVidaactual()+1);
+                }else if(territorio=="desierto"&&equipoDos=="Moros"){
+                    mapa.get(fila).get(columna).setDefensa(mapa.get(fila).get(columna).getDefensa()+1);
+                }else if((territorio=="Bosque"||territorio=="playa"||territorio=="campo abierto"||territorio=="montaña"||territorio=="desierto")&&equipoDos=="Sacro Imperio Romano-Germanico"){
+                    mapa.get(fila).get(columna).setAtaque(mapa.get(fila).get(columna).getAtaque()+1);
+                }
             }else{
                 i--;
             }
