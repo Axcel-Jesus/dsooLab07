@@ -38,10 +38,10 @@ public class mapa {
         System.out.println("Equipo 1: " + equipoUno);
         equipoDos = reinos.get(rand.nextInt(reinos.size()));
         System.out.println("Equipo 2: " + equipoDos);
-        if((territorio=="Bosque"&&equipoUno=="Inglaterra")||(territorio=="Campo abierto"&&equipoUno=="Francia")||(territorio=="Montaña"&&equipoUno=="Castilla-Aragon")||(territorio=="Desierto"&&equipoUno=="Moros")||((territorio=="Bosque"||territorio=="playa"||territorio=="campo abierto")&&equipoUno=="Sacro Imperio Romano-Germanico")){
+        if((territorio=="Bosque"&&equipoUno=="Inglaterra")||(territorio=="Campo abierto"&&equipoUno=="Francia")||(territorio=="Montaña"&&equipoUno=="Castilla-Aragon")||(territorio=="Desierto"&&equipoUno=="Moros")||((territorio=="Bosque"||territorio=="Playa"||territorio=="Campo abierto")&&equipoUno=="Sacro Imperio Romano-Germanico")){
             System.out.println("el equipo 1 gana uno de ataque gracias al terreno");
         }
-        if((territorio=="Bosque"&&equipoDos=="Inglaterra")||(territorio=="Campo abierto"&&equipoDos=="Francia")||(territorio=="Montaña"&&equipoDos=="Castilla-Aragon")||(territorio=="Desierto"&&equipoDos=="Moros")||((territorio=="Bosque"||territorio=="playa"||territorio=="campo abierto")&&equipoDos=="Sacro Imperio Romano-Germanico")){
+        if((territorio=="Bosque"&&equipoDos=="Inglaterra")||(territorio=="Campo abierto"&&equipoDos=="Francia")||(territorio=="Montaña"&&equipoDos=="Castilla-Aragon")||(territorio=="Desierto"&&equipoDos=="Moros")||((territorio=="Bosque"||territorio=="Playa"||territorio=="Campo abierto")&&equipoDos=="Sacro Imperio Romano-Germanico")){
             System.out.println("el equipo 2 gana uno de ataque gracias al terreno");
         }
         for(int i = 0; i < 10; i++){
